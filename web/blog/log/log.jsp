@@ -14,7 +14,7 @@
     <title><%=((Blog) request.getAttribute("blog")).getTitle()%>--SQBlog</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/blog/css/bootstrap4.6.1.css">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript">
         function CommentPost() {

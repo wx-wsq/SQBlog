@@ -9,7 +9,7 @@
     <meta name="generator" content="Hugo 0.88.1">
     <title>SQBlog</title>
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/blog/index/css/bootstrap4.6.1.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/blog/css/bootstrap4.6.1.css">
     <link href="${pageContext.request.contextPath}/blog/index/css/cover.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <script src="${pageContext.request.contextPath}/blog/login/js/loginAndOffline.js"></script>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>SQ's 留言板</title>
     <!-- Bootstrap -->
-    <link href="${pageContext.request.contextPath}/blog/message/css/bootstrap4.6.1.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/blog/css/bootstrap4.6.1.css" rel="stylesheet">
     <script type="text/javascript">
         function CommentPost() {
             const submit = document.createElement('form');
@@ -34,9 +34,6 @@
                 document.body.appendChild(submit);
                 submit.submit();
             }
-        }
-        function isDel(){
-            if()
         }
     </script>
     <style>

@@ -12,7 +12,7 @@
     <title>FAQ</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/blog/faq/css/bootstrap4.6.1.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/blog/css/bootstrap4.6.1.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/blog/faq/css/timeline.css">
 </head>
 <style>

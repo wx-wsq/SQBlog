@@ -13,7 +13,7 @@
     <title>博客</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/blog/logList/css/bootstrap4.6.1.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/blog/css/bootstrap4.6.1.css">
     <link href="${pageContext.request.contextPath}/blog/logList/css/list-groups.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/blog/logList/css/dropdowns.css" rel="stylesheet">
 </head>

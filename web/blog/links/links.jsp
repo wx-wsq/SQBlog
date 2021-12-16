@@ -10,7 +10,7 @@
     <title>友情链接</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/blog/links/css/bootstrap4.6.1.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/blog/css/bootstrap4.6.1.css">
 
   </head>
     <style>

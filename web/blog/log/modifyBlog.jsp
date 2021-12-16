@@ -17,7 +17,7 @@
     <title>Bootstrap - Prebuilt Layout</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/blog/css/bootstrap4.6.1.css">
     <script src="${pageContext.request.contextPath}/blog/log/js/modifyBlogJs.js">
     </script>
     <style>
