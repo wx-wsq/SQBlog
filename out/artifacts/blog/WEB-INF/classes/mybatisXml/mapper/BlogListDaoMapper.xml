@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Dao.BlogListDao">
+    <select id="getBlogs" resultType="POJO.Blog" parameterType="map">
+        select * from blog.log
+        <where>
+            <if test="badge != null">
+                and badge=#{badge}
+            </if>
+            <if test="time==1">
+                and modify_time >= DATE_SUB(NOW(),INTERVAL 1
+                MONTH )
+            </if>
+            <if test="time==2">
+                and modify_time >= DATE_SUB(NOW(),INTERVAL 3
+                MONTH )
+            </if>
+            <if test="time==3">
+                and modify_time >= DATE_SUB(NOW(),INTERVAL 1
+                YEAR )
+            </if>
+            <if test="allText!=null">
+                and title LIKE "%"#{allText}"%" and is_delete is false or author LIKE "%"#{allText}"%" or create_time
+                LIKE "%"#{allText}"%" or modify_time LIKE "%"#{allText}"%"
+            </if>
+            <if test="title!=null">
+                and title LIKE "%"#{title}"%"
+            </if>
+            <if test="author!=null">
+                and author LIKE "%"#{author}"%"
+            </if>
+            <if test="cTime!=null">
+                and create_time= #{cTime}
+            </if>
+            and is_delete is false
+        </where>
+        limit #{start}, #{offset}
+    </select>
+    <select id="getBadges" resultType="String">
+        select DISTINCT badge from blog.log where badge is not null
+    </select>
+    <select id="getPageSum" resultType="java.lang.Integer" parameterType="map">
+        select count(*) from blog.log
+        <where>
+            <if test="badge!=null">
+                and badge =#{badge}
+            </if>
+            <if test="time==1">
+                and modify_time >= DATE_SUB(NOW(),INTERVAL 1
+                MONTH )
+            </if>
+            <if test="time==2">
+                and modify_time >= DATE_SUB(NOW(),INTERVAL 3
+                MONTH )
+            </if>
+            <if test="time==3">
+                and  modify_time >= DATE_SUB(NOW(),INTERVAL 1
+                YEAR )
+            </if>
+            <if test="allText!=null">
+                and title LIKE "%"#{allText}"%" and is_delete is false or author LIKE "%"#{allText}"%" or create_time
+                LIKE "%"#{allText}"%"
+            </if>
+            <if test="title!=null">
+                and title LIKE "%"#{title}"%"
+            </if>
+            <if test="author!=null">
+                and author LIKE "%"#{author}"%"
+            </if>
+            <if test="cTime!=null">
+                and create_time LIKE "%"#{cTime}"%"
+            </if>
+            and is_delete is false
+        </where>
+    </select>
+</mapper>

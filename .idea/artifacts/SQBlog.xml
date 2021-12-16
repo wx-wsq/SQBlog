@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SQBlog">
+    <output-path>$PROJECT_DIR$/out/artifacts/SQBlog</output-path>
+    <root id="archive" name="SQBlog.war">
+      <element id="artifact" artifact-name="blog" />
+    </root>
+  </artifact>
+</component>
