@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Dao.SaveBlogDao">
+    <insert id="createBlog" parameterType="POJO.Blog" useGeneratedKeys="true" keyProperty="ID">
+        insert into blog.log(title, blog_text, author, badge) VALUES (#{title},#{blogText},#{author},#{badge})
+    </insert>
+    <update id="modifyBlog" parameterType="POJO.Blog" useGeneratedKeys="true" keyProperty="ID">
+        update blog.log set title=#{title},blog_text=#{blogText},author=#{author},badge=#{badge},modify_time=NOW() where blog.log.ID=#{ID}
+    </update>
+    <select id="getBlog" resultType="POJO.Blog">
+        select * from blog.log where blog.log.ID=#{ID} and blog.log.is_delete=false
+    </select>
+</mapper>
