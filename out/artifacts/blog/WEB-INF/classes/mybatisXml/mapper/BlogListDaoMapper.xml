@@ -20,8 +20,8 @@
                 YEAR )
             </if>
             <if test="allText!=null">
-                and title LIKE "%"#{allText}"%" and is_delete is false or author LIKE "%"#{allText}"%" or create_time
-                LIKE "%"#{allText}"%" or modify_time LIKE "%"#{allText}"%"
+                and title LIKE "%"#{allText}"%" and is_delete is false or author LIKE "%"#{allText}"%" or CONVERT(create_time using utf8)
+                LIKE "%"#{allText}"%" or CONVERT(modify_time using utf8) LIKE "%"#{allText}"%"
             </if>
             <if test="title!=null">
                 and title LIKE "%"#{title}"%"
@@ -30,7 +30,7 @@
                 and author LIKE "%"#{author}"%"
             </if>
             <if test="cTime!=null">
-                and create_time= #{cTime}
+                and CONVERT(create_time using utf8) like "%"#{cTime}"%"
             </if>
             and is_delete is false
         </where>
@@ -58,8 +58,8 @@
                 YEAR )
             </if>
             <if test="allText!=null">
-                and title LIKE "%"#{allText}"%" and is_delete is false or author LIKE "%"#{allText}"%" or create_time
-                LIKE "%"#{allText}"%"
+                and title LIKE "%"#{allText}"%" and is_delete is false or author LIKE "%"#{allText}"%" or CONVERT(create_time using utf8)
+                LIKE "%"#{allText}"%" or CONVERT(modify_time using utf8) LIKE "%"#{allText}"%"
             </if>
             <if test="title!=null">
                 and title LIKE "%"#{title}"%"
@@ -68,7 +68,7 @@
                 and author LIKE "%"#{author}"%"
             </if>
             <if test="cTime!=null">
-                and create_time LIKE "%"#{cTime}"%"
+                and CONVERT(create_time using utf8) like "%"#{cTime}"%"
             </if>
             and is_delete is false
         </where>
